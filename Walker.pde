@@ -3,10 +3,23 @@ class Walker {
   int y;
   final int w = 2;
   final int h = 2;
+  color[] cols;
+  boolean solidColors = true;
   
   Walker() {
     x = width/2;
     y = height/2; 
+  }
+  
+  Walker(boolean solidStart) {
+    x = width/2;
+    y = height/2;
+    
+    if(solidStart){
+      // start with one solid color per object
+    } else {
+      
+    }
   }
   
   public void display() {
