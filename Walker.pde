@@ -1,3 +1,14 @@
+/* interesting variations:
+  
+  extremely large squares with randomly colored strokes moving very slowly outward in a 'buzzing' motion
+  smallish white shapes on a black background make it looks like burrowers digging tunnels
+  solid objects with consistent colors making their way around
+  objects with transparent fill and random strokes
+  
+  generally larger steps for larger objects unless those objects are exceptionally large
+  
+*/
+
 class Walker {
   int x;
   int y;
