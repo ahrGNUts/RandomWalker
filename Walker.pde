@@ -3,7 +3,16 @@ class Walker {
   int y;
   final int w = 2;
   final int h = 2;
-  color[] cols;
+  color[] cols = new color[] {
+    color(255,0,0),// red
+    color(0,255,0),// green
+    color(0,0,255),// blue
+    color(255,255,0),// yellow
+    color(204,51,0), // orange
+    color(255,0,102), // hot pink
+    color(153,0,204), // purple
+    color(102,255,255) // teal
+  };
   boolean solidColors = true;
   
   Walker() {
