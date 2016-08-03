@@ -45,8 +45,8 @@ class Walker {
     //stroke(0); black dots making branches are boring
     
     if(this.solidColors){
-      stroke(strokeCol);
-      fill(strokeCol);
+      stroke(strokeCol);// solid colors are also interesting
+      fill(strokeCol);// streams and streams
     } else {
       stroke(random(255), random(255), random(255));// that's more like it
       fill(255,255,255,0);// transparent fill is interesting
