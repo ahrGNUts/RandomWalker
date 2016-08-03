@@ -7,7 +7,7 @@ class Walker {
     color(0,255,0),// green
     color(0,0,255),// blue
     color(255,255,0),// yellow
-    color(204,51,0), // orange
+    color(0,51,0), // hunter green
     color(255,0,102), // hot pink
     color(153,0,204), // purple
     color(102,255,255) // teal
