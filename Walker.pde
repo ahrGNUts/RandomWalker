@@ -1,8 +1,8 @@
 class Walker {
   int x;
   int y;
-  //final int w = 2;
-  //final int h = 2;
+  final int w = 2;
+  final int h = 2;
   
   Walker() {
     x = width/2;
@@ -12,7 +12,8 @@ class Walker {
   public void display() {
     //stroke(0); black dots making branches are boring
     stroke(random(255), random(255), random(255));// that's more like it
-    point(x,y);
+    //point(x,y); points are less fun
+    rect(x,y,w,h); // squares are more fun
   }
   
   // if we wanted a different color for each, we could randomly generate numbers in setup
