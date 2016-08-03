@@ -53,7 +53,8 @@ class Walker {
     }
     
     //point(x,y); points are less fun
-    rect(x,y,w,h); // squares are more fun
+    //rect(x,y,w,h); // squares are more fun than points
+    ellipse(x,y,w,h); // ellipses look nicer than squares
   }
   
   // if we wanted a different color for each, we could randomly generate numbers in setup
