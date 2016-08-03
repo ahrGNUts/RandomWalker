@@ -1,9 +1,8 @@
 class Walker {
   int x;
   int y;
-  final int w = 2;
-  final int h = 2;
-  color[] cols = new color[] {
+  
+  private color[] cols = new color[] {
     color(255,0,0),// red
     color(0,255,0),// green
     color(0,0,255),// blue
@@ -13,27 +12,46 @@ class Walker {
     color(153,0,204), // purple
     color(102,255,255) // teal
   };
-  boolean solidColors = true;
+  
+  private boolean solidColors = false;
+  private color strokeCol;
+  private int w;
+  private int h;
   
   Walker() {
     x = width/2;
     y = height/2; 
+    
+    w = 12;
+    h = 12;
   }
   
-  Walker(boolean solidStart) {
+  Walker(boolean solidColors) {
     x = width/2;
     y = height/2;
     
-    if(solidStart){
-      // start with one solid color per object
-    } else {
-      
+    w = 15;
+    h = 15;
+    
+    this.solidColors = solidColors;
+    
+    if(this.solidColors) {
+      int index = int(random(cols.length));
+      strokeCol = cols[index];
     }
   }
   
   public void display() {
     //stroke(0); black dots making branches are boring
-    stroke(random(255), random(255), random(255));// that's more like it
+    
+    if(this.solidColors){
+      stroke(strokeCol);
+      fill(strokeCol);
+    } else {
+      stroke(random(255), random(255), random(255));// that's more like it
+      fill(255,255,255,0);// transparent fill is interesting
+    }
+    
     //point(x,y); points are less fun
     rect(x,y,w,h); // squares are more fun
   }
