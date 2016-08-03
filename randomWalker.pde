@@ -1,4 +1,4 @@
-final int SIZE = 15;
+final int SIZE = 8;
 ArrayList<Walker> w;
 
 void setup() {
