@@ -7,7 +7,7 @@ class Walker {
     color(0,255,0),// green
     color(0,0,255),// blue
     color(255,255,0),// yellow
-    color(0,51,0), // hunter green
+    color(0,75,0), // hunter green
     color(255,0,102), // hot pink
     color(153,0,204), // purple
     color(102,255,255) // teal
@@ -62,10 +62,17 @@ class Walker {
   // if we wanted to get really fancy, we could do some method overloading as well
   
   public void step() {
-    int stepx = int(random(3))-1;
-    int stepy = int(random(3))-1;
+    int stepx = int(random(4))-1; // original: stepx = int(random(3))-1;
+    int stepy = int(random(4))-1; // original: stepy = int(random(3))-1;
     
-    x += stepx;
-    y += stepy;
+    int reverse = int(random(2)); // randomly says if step direction will reverse
+    
+    if(reverse == 1) {
+      x -= stepx;
+      y -= stepy;
+    } else {
+      x += stepx;// original code
+      y += stepy;// original code
+    }
   }
 }// end Walker
