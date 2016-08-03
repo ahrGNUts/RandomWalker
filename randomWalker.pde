@@ -5,8 +5,8 @@ void setup() {
   size(950, 650);
   w = new ArrayList<Walker>();
   
-  initObjects();
   background(255);
+  initObjects();
 }
 
 void draw() {
@@ -17,7 +17,7 @@ void draw() {
   
   if(keyPressed) {
     if(key == 'b') {
-      background(255);
+      background(255);// redraw background, preserve objects
     }
     if(key == 'r') {
       // delete current objects and create new ones with new fill/stroke
@@ -28,15 +28,15 @@ void draw() {
 }
 
 void initObjects() {
-  int solids = int(random(2));
+  int solids = int(random(2));// determines shape colors and fills
   
   if(solids == 1) {
     for(int i = 0; i < SIZE; i++){
-      w.add(new Walker(true));
+      w.add(new Walker(true)); // solid fill shapes
     }
   } else {
     for(int i = 0; i < SIZE; i++){
-    w.add(new Walker());
+    w.add(new Walker()); // random color strokes, no alpha fill
     }
   }
 }
